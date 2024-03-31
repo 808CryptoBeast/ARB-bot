@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Trading</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Interactive Trading</h1>
+  
+  <div id="tradePanel">
+    <label for="quantityInput">Quantity:</label>
+    <input type="number" id="quantityInput"><br><br>
+
+    <label for="priceInput">Price:</label>
+    <input type="number" id="priceInput"><br><br>
+
+    <button onclick="buy()">Buy</button>
+    <button onclick="sell()">Sell</button>
+  </div>
+  
+  <div style="width: 80%;" id="chartContainer">
+    <canvas id="movingAveragesChart"></canvas>
+  </div>
+  <div id="balance"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="trading.js"></script>
+</body>
+</html><div id="historicalPrices">
+    <h2>Historical Prices</h2>
+    <ul id="pricesList"></ul>
+</div>// Display Historical Prices
+const pricesList = document.getElementById('pricesList');
+historicalPrices.forEach((price, index) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `Day ${index + 1}: $${price}`;
+    pricesList.appendChild(listItem);
+});<div id="historicalPrices">
+    <h2>Historical Prices</h2>
+    <ul id="pricesList"></ul>
+</div>

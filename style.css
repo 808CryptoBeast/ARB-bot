@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#tradePanel {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 10px;
+}

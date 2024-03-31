@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Information</title>
+</head>
+<body>
+  <h1>Trading Information</h1>
+  
+  <div id="movingAverages"></div>
+  <div id="balance"></div>
+  
+  <script>
+    // JavaScript logic to fetch and display Moving Averages and Balance
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('movingAverages').innerText = `Moving Averages: ${data.movingAverages.join(', ')}`;
+        document.getElementById('balance').innerText = `Current Balance: $${data.balance}`;
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  </script>
+</body>
+</html>
